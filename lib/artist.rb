@@ -24,28 +24,19 @@ class Artist
     @@all
   end
 
-  # def self.create(name)
-  #   artist = self.new(name)
-  #   artist.save
-  #   artist
-  # end
-  #
-  # def self.find(name)
-  #   @@all.detect { |artist| artist.name == name}
-  # end
-  #
-  # def self.find_or_create_by_name(name)
-  #   self.find(name) == nil ? self.create(name) : self.find(name)
-  # end
+  def self.create(name)
+    artist = self.new(name)
+    artist.save
+    artist
+  end
 
-  if @@all.any? {|artist| artist.name == artist_name}
-  result = @@all.detect {|artist| artist.name == artist_name}
-else
-  artist = Artist.new(artist_name)
-  @@all << artist
-  artist
-end
-end
+  def self.find(name)
+    @@all.detect { |artist| artist.name == name}
+  end
+
+  def self.find_or_create_by_name(name)
+    self.find(name) == nil ? self.create(name) : self.find(name)
+  end
 
   def print_songs
     @songs.each {|s| puts s.name }
