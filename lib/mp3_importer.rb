@@ -8,7 +8,6 @@ class MP3Importer
 
   def files
     files = Dir.entries(@path)
-<<<<<<< HEAD
     files.delete_if { |x| x == "." || x ==".." }
   end
 
