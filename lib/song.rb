@@ -16,10 +16,4 @@ class Song
     song.artist_name=(new_song[0])
     song
   end
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 33b847409c8cab138814c782c4a28f4c539e05a7
 end
