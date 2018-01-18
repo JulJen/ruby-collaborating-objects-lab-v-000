@@ -42,8 +42,8 @@ class Artist
     if @@all.any? {|artist| artist.name == artist_name}
       find_name = @@all.detect {|artist| artist.name == artist_name}
     else
-      artist = Artist.new(artist_name)
-      @@all << artist
+      new_artist = Artist.new(artist_name)
+      @@all << new_artist
       artist
     end
   end
